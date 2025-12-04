@@ -8,12 +8,14 @@ public class Client {
     private Agence monAgence;
     private Compte mesComptes[] ;
     private int NbrdesCompte;
-    private int NbrdesClient = 0;
+    private static int NbrdesClient = 0;
     public Client(String nom , String prenom , String adresse , Agence agence ){
-        NbrdesClient++;
+            NbrdesClient++;
+        this.code = this.getClass().getName() +":"+ NbrdesClient;
         this.nom = nom;
         this.prenom = prenom ;
         this.adresse = adresse ;
+    
     }
     
     public Compte getCompte(int n){

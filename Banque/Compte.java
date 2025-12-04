@@ -6,7 +6,11 @@ public class Compte {
      protected double solde ;
      protected Agence LAgence ;
      protected Client  Aproprietaires ;
-    
+     private static int NbrdesCompte = 0;
+     public Compte(){
+      NbrdesCompte++;
+      this.code = this.getClass().getName()+":"+NbrdesCompte; 
+     }
      public String getCode(){
         return this.code;
      }
@@ -17,6 +21,10 @@ public class Compte {
          this.solde += amount ;
      }
      public void retirer(double amount ){
+      if(amount > this.solde){
+         System.out.println("vous avez pas Cette somme !");
+         return ;
+      }
         this.solde -= amount;
      }
 }

@@ -5,14 +5,15 @@ package Banque;
     private String adresse ;
     private Client lesClients[] ;
     private Compte lesComptes[] ;
-    private static int CompteurAgence;
+    private static int CompteurAgence = 0 ;
     private  int CompteurClients =0 ;
     private int CompteurCompte = 0 ;
     
     public Agence( String adresse ){
-            CompteurAgence++;
+                  CompteurAgence++;
             this.numero = this.getClass().getName()+":"+CompteurAgence ;
             this.adresse = adresse;
+
     }
     public Compte getCompte(int n){
       return this.lesComptes[n];
