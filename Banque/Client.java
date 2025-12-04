@@ -40,4 +40,19 @@ public class Client {
     public String getCode(){
         return this.code;
     }
+     @Override
+     public String toString(){
+        String comptes = "";
+        for(int i = 0 ; i<mesComptes.length ; i++){
+            comptes += "\n "+mesComptes[i].toString();
+        }
+       return "Client:{"
+        +"\n code = "+this.code
+        +"\n nom ="+this.nom
+        +"\n prenom ="+this.prenom
+        +"\n adresse ="+this.adresse
+        +"\n Agence ="+this.monAgence.toString()
+        +"\n mes comptes =>"+comptes
+        +"}" ;
+    }
     }

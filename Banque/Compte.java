@@ -5,7 +5,7 @@ public class Compte {
      private String code ;
      protected double solde ;
      protected Agence LAgence ;
-     protected Client  Aproprietaires ;
+     protected Client  proprietaire ;
      private static int NbrdesCompte = 0;
      public Compte(){
       NbrdesCompte++;
@@ -27,4 +27,5 @@ public class Compte {
       }
         this.solde -= amount;
      }
+     
 }

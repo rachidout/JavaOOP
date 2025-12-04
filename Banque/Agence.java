@@ -37,4 +37,17 @@ package Banque;
     public int getNbComptes(){
       return lesComptes.length;
     }
+    @Override
+    public String toString(){
+      String clients="";
+      for (int i = 0; i < lesClients.length; i++) {
+        clients ="\n "+lesClients[i].toString();
+      }
+      return "Agence {"
+      +"\n numero"+this.numero
+      +"\n adresse"+this.adresse
+      +"\n les Clients"+clients
+      +" }"
+;
+    }
  }    
