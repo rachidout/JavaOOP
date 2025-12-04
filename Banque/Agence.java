@@ -13,8 +13,6 @@ package Banque;
             CompteurAgence++;
             this.numero = this.getClass().getName()+":"+CompteurAgence ;
             this.adresse = adresse;
-
-            
     }
     public Compte getCompte(int n){
       return this.lesComptes[n];
