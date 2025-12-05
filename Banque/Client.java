@@ -19,11 +19,12 @@ public class Client {
         mesComptes = new Compte[5];
     }
     
-    public String getCompte(int n){
+    public Compte getCompte(int n){
         if(n > NbrdesCompte){
-            return"vous avez pas ce nombres des comptes !";
+            System.out.println("vous avez pas ce nombres des comptes !");
+            return null;
         }
-        return this.mesComptes[n-1].toString();
+        return this.mesComptes[n];
     }
     public void addCompte(Compte compte){
         this.mesComptes[NbrdesCompte++]= compte;
@@ -35,7 +36,7 @@ public class Client {
         this.mesComptes[compte-1].retirer(amount);
     }
     public int getNbrComptes(){
-        return this.NbrdesCompte;
+        return this.NbrdesCompte+1;
     }
     public String getCode(){
         return this.code;

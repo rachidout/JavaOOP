@@ -6,8 +6,8 @@ package Banque;
     private Client lesClients[] ;
     private Compte lesComptes[] ;
     private static int CompteurAgence = 0 ;
-    private  int CompteurClients =0 ;
-    private int CompteurCompte = 0 ;
+    private static int CompteurClients =0 ;
+    private static int CompteurCompte = 0 ;
     
     public Agence( String adresse ){
                   CompteurAgence++;
@@ -25,8 +25,11 @@ package Banque;
     public Client getClient(int n){
       return this.lesClients[n] ;
     }
-    public void addClient( Client client){
+    public void addClient(Client client){
       lesClients[CompteurClients++] = client;
+      for (int i=0 ; i <= (client.getNbrComptes()-1) ; i++) {
+          addCompte(client.getCompte(i));
+      } 
     }
     public void addCompte(Compte compte){
       this.lesComptes[CompteurCompte++] = compte;
@@ -42,7 +45,7 @@ package Banque;
     public String toString(){
       String clients="";
       for (int i = 0; i < CompteurClients ; i++) {
-        clients ="\n "+lesClients[i].toString();
+        clients +="\n "+lesClients[i].toString();
       }
       return "Agence {"
       +"\n numero = "+this.numero

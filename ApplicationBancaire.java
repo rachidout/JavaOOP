@@ -24,9 +24,12 @@ public class ApplicationBancaire {
      compte6.setTaux(2);
      client[3].addCompte(compte5);
      client[3].addCompte(compte6);
-     agence1.addClient(client[0]);
+         //  ---------------------------------------------------------------------------------
+       agence1.addClient(client[3]);
+       agence1.addClient(client[2]);
+              
       System.out.println(agence1.toString());
+    
       }
-   
 
 }
