@@ -13,7 +13,8 @@ package Banque;
                   CompteurAgence++;
             this.numero = this.getClass().getName()+":"+CompteurAgence ;
             this.adresse = adresse;
-
+            this.lesClients = new Client[10];
+            this.lesComptes = new Compte[100];
     }
     public String getNumero(){
       return this.numero;
@@ -26,26 +27,23 @@ package Banque;
     }
     public void addClient( Client client){
       lesClients[CompteurClients++] = client;
-      
-      System.out.println("Le client est ajouter !");
     }
     public void addCompte(Compte compte){
       this.lesComptes[CompteurCompte++] = compte;
-      System.out.println("Le Compte est ajouter !");
     }
     
     public int getNbClients(){
-      return lesClients.length;
+      return CompteurClients;
     }
     public int getNbComptes(){
-      return lesComptes.length;
+      return CompteurCompte;
     }
     @Override
     public String toString(){
       String clients="";
-      // for (int i = 0; i < lesClients.length; i++) {
-      //   clients ="\n "+lesClients[i].toString();
-      // }
+      for (int i = 0; i < CompteurClients ; i++) {
+        clients ="\n "+lesClients[i].toString();
+      }
       return "Agence {"
       +"\n numero = "+this.numero
       +"\n adresse ="+this.adresse

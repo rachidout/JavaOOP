@@ -19,21 +19,20 @@ public class Client {
         mesComptes = new Compte[5];
     }
     
-    public Compte getCompte(int n){
+    public String getCompte(int n){
         if(n > NbrdesCompte){
-            System.out.println("vous avez pas ce nombres des comptes !");
-            return null;
+            return"vous avez pas ce nombres des comptes !";
         }
-        return this.mesComptes[n];
+        return this.mesComptes[n-1].toString();
     }
     public void addCompte(Compte compte){
         this.mesComptes[NbrdesCompte++]= compte;
     }
     public void deposer(int compte , double amount ){
-        this.mesComptes[compte].deposer(amount);
+        this.mesComptes[compte-1].deposer(amount);
     }
     public void retirer(int compte , double amount){
-        this.mesComptes[compte].retirer(amount);
+        this.mesComptes[compte-1].retirer(amount);
     }
     public int getNbrComptes(){
         return this.NbrdesCompte;

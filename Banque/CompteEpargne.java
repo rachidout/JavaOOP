@@ -19,6 +19,7 @@ public class CompteEpargne extends Compte{
      @Override
     public String toString(){
       return "Compte Eparge {"
+      +"\n code =" +this.getCode()
       +"\n solde = "+this.solde
       +"\n taux = "+this.taux
       +"\n Proprietaire = "+this.proprietaire.getCode()

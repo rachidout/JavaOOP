@@ -19,13 +19,13 @@ public class ApplicationBancaire {
      ComptePayant compte4 = new ComptePayant(3000,client[2]);
      client[2].addCompte(compte4);
      client[2].addCompte(compte3);
-     ComptePayant compte5 = new ComptePayant(0,client[3]);
+     ComptePayant compte5 = new ComptePayant(1000,client[3]);
      CompteEpargne compte6 = new CompteEpargne(2300,client[3]);
      compte6.setTaux(2);
      client[3].addCompte(compte5);
      client[3].addCompte(compte6);
-      
-    System.out.println(client[1].toString());
+     agence1.addClient(client[0]);
+      System.out.println(agence1.toString());
       }
    
 
