@@ -2,7 +2,10 @@ package Banque;
 
 public class ComptePayant extends Compte{
        private final double taux_operation = 5 ;
-
+       
+       public ComptePayant(int amount){
+            super(amount);
+       }
        @Override 
        public void deposer(double amount){
              solde += (amount-taux_operation);

@@ -7,9 +7,11 @@ public class Compte {
      protected Agence LAgence ;
      protected Client  proprietaire ;
      private static int NbrdesCompte = 0;
-     public Compte(){
+     public Compte(){}
+     public Compte(double solde ){
       NbrdesCompte++;
       this.code = this.getClass().getName()+":"+NbrdesCompte; 
+      this.solde = solde;
      }
      public String getCode(){
         return this.code;

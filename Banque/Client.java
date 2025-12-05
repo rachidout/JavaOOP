@@ -15,7 +15,8 @@ public class Client {
         this.nom = nom;
         this.prenom = prenom ;
         this.adresse = adresse ;
-    
+        this.monAgence = agence;
+        mesComptes = new Compte[5];
     }
     
     public Compte getCompte(int n){
@@ -43,7 +44,7 @@ public class Client {
      @Override
      public String toString(){
         String comptes = "";
-        for(int i = 0 ; i<mesComptes.length ; i++){
+        for(int i = 0 ; i<NbrdesCompte ; i++){
             comptes += "\n "+mesComptes[i].toString();
         }
        return "Client:{"
@@ -51,7 +52,7 @@ public class Client {
         +"\n nom ="+this.nom
         +"\n prenom ="+this.prenom
         +"\n adresse ="+this.adresse
-        +"\n Agence ="+this.monAgence.toString()
+        +"\n Agence ="+this.monAgence.getNumero()
         +"\n mes comptes =>"+comptes
         +"}" ;
     }

@@ -3,6 +3,9 @@ package Banque;
 public class CompteEpargne extends Compte{
     private double taux ;
 
+    public CompteEpargne(int amount){
+        super(amount);
+    }
     public double getTaux(){
        return this.taux;
     }
@@ -18,7 +21,7 @@ public class CompteEpargne extends Compte{
       return "Compte Eparge {"
       +"\n solde = "+this.solde
       +"\n taux = "+this.taux
-      +"\n Proprietaire = "+this.proprietaire.toString()
+    //   +"\n Proprietaire = "+this.proprietaire.toString()
       +"}";
      }
 }
