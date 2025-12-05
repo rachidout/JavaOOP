@@ -3,8 +3,8 @@ package Banque;
 public class ComptePayant extends Compte{
        private final double taux_operation = 5 ;
        
-       public ComptePayant(int amount){
-            super(amount);
+       public ComptePayant(int amount,Client proprietaire){
+            super(amount,proprietaire);
        }
        @Override 
        public void deposer(double amount){
@@ -23,7 +23,7 @@ public class ComptePayant extends Compte{
       return "Compte Eparge {"
       +"\n solde = "+this.solde
       +"\n taux_Operation = "+this.taux_operation
-      +"\n Proprietaire = "+this.proprietaire.toString()
+      +"\n Proprietaire = "+this.proprietaire.getCode()
       +"}";
      }
 }

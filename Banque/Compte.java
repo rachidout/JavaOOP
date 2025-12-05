@@ -8,10 +8,11 @@ public class Compte {
      protected Client  proprietaire ;
      private static int NbrdesCompte = 0;
      public Compte(){}
-     public Compte(double solde ){
+     public Compte(double solde ,Client proprietaire ){
       NbrdesCompte++;
       this.code = this.getClass().getName()+":"+NbrdesCompte; 
       this.solde = solde;
+      this.proprietaire =proprietaire;
      }
      public String getCode(){
         return this.code;
