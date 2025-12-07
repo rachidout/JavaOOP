@@ -13,7 +13,7 @@ public class CompteEpargne extends Compte{
         this.taux = taux ;
     }
     public void calculInteret(){
-        this.solde += (solde*this.taux)%100;
+        this.solde += (solde*this.taux/100);
     }
 
      @Override
