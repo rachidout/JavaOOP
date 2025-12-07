@@ -1,4 +1,4 @@
-import java.util.*;
+
 import Banque.*;
 
 public class ApplicationBancaire {
@@ -29,11 +29,17 @@ public class ApplicationBancaire {
             agence1.addClient(client[1]);
             agence1.addClient(client[2]);
             agence1.addClient(client[3]);
-
+            // ---Calculer de linteret
             for (int i = 0; i < agence1.getNbComptes(); i++) {
                   if (agence1.getCompte(i) instanceof CompteEpargne) {
                         ((CompteEpargne) agence1.getCompte(i)).calculInteret();
                   }
             }
+            // // ---la somme des solde dun client
+            // System.out.println("La somme des solde pour le client de nom " +
+            // client[3].getName() + " est : "
+            // + client[3].getSoldeTotale());
+            // tri des client based on solde total
+            agence1.Clientbysolde();
       }
 }

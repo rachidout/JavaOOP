@@ -49,6 +49,27 @@ public class Agence {
     return CompteurCompte;
   }
 
+  public void Clientbysolde() {
+    Client[] ClientsTrie = new Client[getNbClients()];
+    Client tmp = new Client();
+    for (int i = 0; i < getNbClients(); i++) {
+      ClientsTrie[i] = this.getClient(i);
+    }
+    for (int i = 0; i < getNbClients(); i++) {
+      for (int j = i + 1; j < getNbClients(); j++) {
+        if (this.getClient(i).getSoldeTotale() < this.getClient(j).getSoldeTotale()) {
+          tmp = ClientsTrie[i];
+          ClientsTrie[i] = ClientsTrie[j];
+          ClientsTrie[j] = tmp;
+        }
+      }
+    }
+    for (int i = 0; i < this.getNbClients(); i++) {
+      System.out
+          .println("le Client " + ClientsTrie[i].getName() + " dont le solde est " + ClientsTrie[i].getSoldeTotale());
+    }
+  }
+
   @Override
   public String toString() {
     String clients = "";

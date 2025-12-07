@@ -1,34 +1,45 @@
 package Banque;
 
 public class Compte {
-     
-     private String code ;
-     protected double solde ;
-     protected Agence LAgence ;
-     protected Client  proprietaire ;
-     private static int NbrdesCompte = 0;
-     public Compte(){}
-     public Compte(double solde ,Client proprietaire ){
+
+   private String code;
+   protected double solde;
+   protected Agence LAgence;
+   protected Client proprietaire;
+   private static int NbrdesCompte = 0;
+
+   public Compte() {
+   }
+
+   public Compte(double solde, Client proprietaire) {
       NbrdesCompte++;
-      this.code = this.getClass().getName()+":"+NbrdesCompte; 
+      this.code = this.getClass().getName() + ":" + NbrdesCompte;
       this.solde = solde;
-      this.proprietaire =proprietaire;
-     }
-     public String getCode(){
-        return this.code;
-     }
-     public void setCode(String code){
-        this.code = code ;
-     }
-     public void deposer(double amount){
-         this.solde += amount ;
-     }
-     public void retirer(double amount ){
-      if(amount > this.solde){
+      this.proprietaire = proprietaire;
+   }
+
+   public double getSolde() {
+      return this.solde;
+   }
+
+   public String getCode() {
+      return this.code;
+   }
+
+   public void setCode(String code) {
+      this.code = code;
+   }
+
+   public void deposer(double amount) {
+      this.solde += amount;
+   }
+
+   public void retirer(double amount) {
+      if (amount > this.solde) {
          System.out.println("vous avez pas Cette somme !");
-         return ;
+         return;
       }
-        this.solde -= amount;
-     }
-     
+      this.solde -= amount;
+   }
+
 }
