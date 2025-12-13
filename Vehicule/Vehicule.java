@@ -13,20 +13,6 @@ public abstract class Vehicule implements Motorisation {
         this.carburant = carburant;
     }
 
-    public void setModele(String modele) {
-        this.modele = modele;
-    }
-
-    public void setModele(String modele) {
-        this.modele = modele;
-    }
-
-    public void setModele(String modele) {
-        this.modele = modele;
-    }
-
-    public void setModele(String modele) {
-        this.modele = modele;
-    }
+  
 
 }
