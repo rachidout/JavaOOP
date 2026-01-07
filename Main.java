@@ -1,24 +1,19 @@
-import Voiture.*;
-public class Main{
-   public static void main(String args[]){
-   
-    Roue[] lesRoue = new Roue[4];
-    lesRoue[0] = new Roue(10,5);
-    lesRoue[1] = new Roue(10,5);
-    lesRoue[2] = new Roue(10,5);
-    lesRoue[3] = new Roue(10,5);
+import Listjava.*;
+import java.util.ArrayList;
+import java.util.List;
 
-    Voiture V1 = new Voiture("2025", "Mercedes Benz", 350, lesRoue, "V12", 500);
-    System.out.println(V1.toString());
-    V1.demarre();
-    V1.accelere(100);
-      V1.accelere(100);
-        V1.accelere(100);
-    
-   
-    
-    V1.mouterestchaffe();
-
-
-   }
+public class Main {
+  public static void main(String args[]) {
+    Employee e1 = new Developer("ilyas", 2000);
+    Employee e2 = new Developer("yassine", 2500);
+    Employee e3 = new Manager("Rachid", 10000, 1000);
+    List<Employee> Employees = new ArrayList<>();
+    Employees.add(e1);
+    Employees.add(e2);
+    Employees.add(e3);
+  
+    for (Employee e : Employees) {
+      System.out.println(e.toString());
+    }
+  }
 }
